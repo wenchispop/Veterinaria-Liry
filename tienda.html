@@ -11,21 +11,23 @@
 </head>
 <body>
 
-    <!-- ===== MENÚ (igual que index.html) ===== -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
         <div class="container">
-            <a class="navbar-brand" href="index.html">🐾 Patitas Felices</a>
+            <a class="navbar-brand fw-bold" href="index.html">
+                🐾 Veterinaria Liry
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">👤 Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login.html">👤 Iniciar Sesión</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="carrito.html">
+                        <a class="nav-link active" href="carrito.html">
                             🛒 Carrito
                             <span id="cart-count" class="badge bg-warning text-dark">0</span>
                         </a>
@@ -37,28 +39,70 @@
 
     <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <div class="container my-5">
-        <h1 class="text-center text-white mb-4">📦 Todos los Productos</h1>
-        <div class="row" id="lista-productos">
-            <!-- Se llena con JavaScript -->
+        <h1 class="text-center mb-4">📦 Todos los Productos</h1>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-light text-dark h-100">
+                    <img src="img/imagenProducto1.png" class="card-img-top" alt="Corona Plateada Con Perlas Blancas Para Gatos" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Corona Plateada Con Perlas Blancas Para Gatos</h5>
+                        <p class="card-text">$7.990</p>
+                        <a href="detalle-producto.html?id=1" class="btn btn-primary">🔍 Ver detalle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-light text-dark h-100">
+                    <img src="img/imagenProducto2.png" class="card-img-top" alt="Mascara de Batman Talla XS Para Gatos Hasta 6 Meses" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Mascara de Batman Talla XS Para Gatos Hasta 6 Meses</h5>
+                        <p class="card-text">$5.190</p>
+                        <a href="detalle-producto.html?id=2" class="btn btn-primary">🔍 Ver detalle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-light text-dark h-100">
+                    <img src="img/imagenProducto3.png" class="card-img-top" alt="Leonardo Lata para Gato" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Leonardo Lata para Gato</h5>
+                        <p class="card-text">$4.900</p>
+                        <a href="detalle-producto.html?id=3" class="btn btn-primary">🔍 Ver detalle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-light text-dark h-100">
+                    <img src="img/imagenProducto4.png" class="card-img-top" alt="Cama BRNX con Forma de Hoja - Talla M para Perros y Gatos" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Cama BRNX con Forma de Hoja - Talla M para Perros y Gatos</h5>
+                        <p class="card-text">$15.000</p>
+                        <a href="detalle-producto.html?id=4" class="btn btn-primary">🔍 Ver detalle</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-light text-dark h-100">
+                    <img src="img/imagenProducto5.png" class="card-img-top" alt="Churu Atun - Pote con 50 Unidades de Snack Cremoso para Gatos" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Churu Atun - Pote con 50 Unidades de Snack Cremoso para Gatos</h5>
+                        <p class="card-text">$9.500</p>
+                        <a href="detalle-producto.html?id=5" class="btn btn-primary">🔍 Ver detalle</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- ===== FOOTER ===== -->
-    <footer class="bg-dark text-white py-4 mt-5">
+    <footer class="navbar-background text-white py-4 mt-5">
         <div class="container text-center">
-            <p class="mb-0">© 2026 Patitas Felices - Todos los derechos reservados</p>
+            <p class="mb-0">© 2026 Veterinaria Liry - Todos los derechos reservados</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/productos.js"></script>
-    <script>
-        // Al cargar la página, mostrar todos los productos
-        document.addEventListener('DOMContentLoaded', function() {
-            mostrarProductos('lista-productos'); // sin límite = todos
-        });
-    </script>
+
 </body>
 </html>
