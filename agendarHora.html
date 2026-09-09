@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Agenda una hora para la atención de tu mascota en Veterinaria Liry.">
+	<title>Agendar Hora - Veterinaria Liry</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="bg-light">
+
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-background">
+		<div class="container">
+			<a class="navbar-brand fw-bold" href="index.html">🐾 Veterinaria Liry</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar navegación">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+					<li class="nav-item"><a class="nav-link active" aria-current="page" href="agendarHora.html">Agendar hora</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.html">👤 Iniciar Sesión</a></li>
+					<li class="nav-item">
+						<a class="nav-link" href="carrito.html">🛒 Carrito <span id="cart-count" class="badge bg-warning text-dark">0</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-9 col-xl-8">
+				<div class="text-center mb-4">
+					<p class="text-primary fw-semibold mb-2">ATENCIÓN PARA TU MASCOTA</p>
+					<h1 class="fw-bold">Agenda tu hora</h1>
+					<p class="text-muted mb-0">Completa tus datos y nos pondremos en contacto para confirmar la cita.</p>
+				</div>
+
+				<div class="card border-0 shadow-sm">
+					<div class="card-body p-4 p-md-5">
+						<form id="appointmentForm">
+							<fieldset class="mb-4">
+								<legend class="h4 mb-3">Datos del tutor</legend>
+								<div class="row g-3">
+									<div class="col-md-6">
+										<label for="ownerName" class="form-label">Nombre completo</label>
+										<input type="text" class="form-control" id="ownerName" name="ownerName" autocomplete="name" required>
+									</div>
+									<div class="col-md-6">
+										<label for="ownerEmail" class="form-label">Correo electrónico</label>
+										<input type="email" class="form-control" id="ownerEmail" name="ownerEmail" autocomplete="email" placeholder="nombre@correo.cl" required>
+									</div>
+									<div class="col-md-6">
+										<label for="ownerPhone" class="form-label">Teléfono</label>
+										<input type="tel" class="form-control" id="ownerPhone" name="ownerPhone" autocomplete="tel" placeholder="9 1234 5678" required>
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="mb-4">
+								<legend class="h4 mb-3">Datos de la mascota</legend>
+								<div class="row g-3">
+									<div class="col-md-6">
+										<label for="petName" class="form-label">Nombre de la mascota</label>
+										<input type="text" class="form-control" id="petName" name="petName" required>
+									</div>
+									<div class="col-md-6">
+										<label for="petType" class="form-label">Tipo de mascota</label>
+										<select class="form-select" id="petType" name="petType" required>
+											<option value="" selected disabled>Selecciona una opción</option>
+											<option value="perro">Perro</option>
+											<option value="gato">Gato</option>
+											<option value="otro">Otro</option>
+										</select>
+									</div>
+								</div>
+							</fieldset>
+
+							<fieldset class="mb-4">
+								<legend class="h4 mb-3">Detalles de la consulta</legend>
+								<div class="row g-3">
+									<div class="col-md-6">
+										<label for="service" class="form-label">Servicio</label>
+										<select class="form-select" id="service" name="service" required>
+											<option value="" selected disabled>Selecciona un servicio</option>
+											<option value="consulta">Consulta veterinaria</option>
+											<option value="vacunacion">Vacunación</option>
+											<option value="control">Control preventivo</option>
+											<option value="peluqueria">Peluquería y baño</option>
+											<option value="urgencia">Urgencia</option>
+										</select>
+									</div>
+									<div class="col-md-3">
+										<label for="appointmentDate" class="form-label">Fecha</label>
+										<input type="date" class="form-control" id="appointmentDate" name="appointmentDate" required>
+									</div>
+									<div class="col-md-3">
+										<label for="appointmentTime" class="form-label">Hora</label>
+										<select class="form-select" id="appointmentTime" name="appointmentTime" required>
+											<option value="" selected disabled>Hora</option>
+											<option>09:00</option>
+											<option>10:00</option>
+											<option>11:00</option>
+											<option>12:00</option>
+											<option>15:00</option>
+											<option>16:00</option>
+											<option>17:00</option>
+											<option>18:00</option>
+										</select>
+									</div>
+									<div class="col-12">
+										<label for="reason" class="form-label">Motivo de la consulta <span class="text-muted">(opcional)</span></label>
+										<textarea class="form-control" id="reason" name="reason" rows="3" placeholder="Cuéntanos brevemente cómo podemos ayudar.  "></textarea>
+									</div>
+								</div>
+							</fieldset>
+
+							<div class="form-check mb-4">
+								<input class="form-check-input" type="checkbox" id="privacyConsent" required>
+								<label class="form-check-label" for="privacyConsent">Acepto que Veterinaria Liry use estos datos para coordinar mi hora.</label>
+							</div>
+
+							<button type="submit" class="btn btn-primary w-100 py-2">Solicitar hora</button>
+							<div id="appointmentMessage" class="alert alert-success mt-4 mb-0 d-none" role="status">
+								Tu solicitud fue registrada. Te contactaremos para confirmar la hora.
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<p class="text-center text-muted small mt-3">Para urgencias, comunícate directamente con la clínica.</p>
+			</div>
+		</div>
+	</main>
+
+	<footer class="navbar-background text-white py-4 mt-3">
+		<div class="container text-center">
+			<p class="mb-0">© 2026 Veterinaria Liry - Todos los derechos reservados</p>
+		</div>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		const appointmentDate = document.getElementById('appointmentDate');
+		const today = new Date();
+		const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000);
+		appointmentDate.min = localDate.toISOString().split('T')[0];
+
+		document.getElementById('appointmentForm').addEventListener('submit', function (event) {
+			event.preventDefault();
+			document.getElementById('appointmentMessage').classList.remove('d-none');
+			this.reset();
+			appointmentDate.min = localDate.toISOString().split('T')[0];
+		});
+	</script>
+</body>
+</html>

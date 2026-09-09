@@ -29,7 +29,7 @@ botonInicioSesion.addEventListener('click', function () {
     // 5. Validar las credenciales (usuario y contraseña)
     // =============================================
 
-    // Caso 1: Administrador
+    // Caso 1: Admin
     if (email === 'admin@tienda.cl' && password === '1234') {
         // Guardar el rol en localStorage (para saber quién está logueado)
         localStorage.setItem('rol_usuario', 'admin');
@@ -43,22 +43,8 @@ botonInicioSesion.addEventListener('click', function () {
         localStorage.setItem('rol_usuario', 'vendedor');
         window.location = 'vendedor/index.html';
         return;
+    
+    } else {
+        alert("Credenciales incorrectas")
     }
-
-    // Caso 3: Cliente (si quieres agregar más)
-    if (email === 'cliente@gmail.com' && password === '1234') {
-        localStorage.setItem('rol_usuario', 'cliente');
-        window.location = 'index.html';
-        return;
-    }
-
-    // =============================================
-    // 6. Si ninguna credencial coincide -> ERROR
-    // =============================================
-    // Mostrar mensaje de error en la página (en lugar de alert)
-    const errorDiv = document.getElementById('loginError');
-    errorDiv.style.display = 'block';
-
-    // También puedes mostrar un alert si prefieres:
-    // alert('❌ Credenciales incorrectas. Intenta nuevamente.');
 });

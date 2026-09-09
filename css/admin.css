@@ -1,0 +1,54 @@
+/* ============================================
+   BASE
+   ============================================ */
+
+.navbar-background {
+    background-color: #022b7c !important;
+}
+
+
+/* ============================================
+   ESTILOS PARA EL PANEL DE ADMINISTRACIÓN
+   ============================================ */
+.sidebar {
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    padding-top: 1rem;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 0.25rem;
+    transition: background-color 0.2s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+.main-content {
+    padding: 2rem;
+}
+
+.card-stats {
+    border-left: 4px solid var(--color-accent);
+}
+
+.estado-pendiente {
+    color: #f59e0b;
+}
+.estado-confirmada {
+    color: #10b981;
+}
+.estado-cancelada {
+    color: #ef4444;
+}
+
+/* Ajuste para el modal en modo oscuro (opcional) */
+.modal-content {
+    background-color: #f8f9fa;
+}
