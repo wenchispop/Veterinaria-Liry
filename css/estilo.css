@@ -1,12 +1,3 @@
-/* ============================================
-   BASE
-   ============================================ */
-/* Reglas generales reutilizadas por las páginas públicas del proyecto. */
-
-.navbar-background {
-    /* Color principal de la barra de navegación y del pie de página. */
-    background-color: #022b7c !important;
-}
 
 
 /* ============================================
@@ -41,22 +32,70 @@
     z-index: 1;
 }
 
-/* Texto del banner: TÍTULO BLANCO, SUBTÍTULO AMARILLO */
-/* Se aplican colores de alto contraste al título y al texto descriptivo. */
-.video-banner .container h1 {
-    color: #ffffff !important;
-}
-.video-banner .container .lead {
-    color: #facc15 !important;  /* Amarillo vibrante */
+/* El contenido del banner queda por encima del video y de la capa oscura. */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: min(900px, 92%);
+    margin: auto;
+    color: #fff;
+    text-align: center;
 }
 
-/* Badge "24/7" con fondo naranja */
-/* Ajusta el tamaño del distintivo 24/7 junto al título principal. */
-.badge-24 {
+.hero-title {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+}
+
+.hero-badge {
     display: inline-block;
-    padding: 0.35em 0.65em;
-    font-size: 0.48em;
+    padding: .35em .65em;
+    border-radius: 5px;
+    background: #facc15;
+    color: #222;
+    font-size: .48em;
     vertical-align: middle;
+}
+
+.hero-text {
+    margin: 1rem 0 1.5rem;
+    color: #facc15;
+    font-size: 1.2rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.hero-button {
+    padding: .7rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-button:hover {
+    background: #fff;
+    color: #022b7c;
+}
+
+.hero-whatsapp {
+    border-color: #198754;
+    background: #198754;
+}
+
+/* Texto del banner: TÍTULO BLANCO, SUBTÍTULO AMARILLO */
+/* Se aplican colores de alto contraste al título y al texto descriptivo. */
+.video-banner .hero-title {
+    color: #ffffff !important;
+}
+.video-banner .hero-text {
+    color: #facc15 !important;  /* Amarillo vibrante */
 }
 
 /* ============================================
@@ -68,9 +107,78 @@
         min-height: 520px;
     }
 
-    .video-banner .btn {
-        display: block;
+    .hero-actions {
+        display: grid;
+    }
+
+    .hero-button {
         width: 100%;
         margin: 0.5rem 0;
     }
 }
+
+/* Barra principal NAVBAR. */
+.site-nav {
+    background: #022b7c;
+    color: #fff;
+}
+
+/* El footer comparte el color y la separación visual del navbar. */
+.site-footer {
+    margin-top: 3rem;
+    background: #022b7c;
+    color: #fff;
+}
+
+.site-footer .nav-inner {
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+
+.site-footer p {
+    margin: 0;
+    text-align: center;
+}
+
+.nav-inner {
+    width: min(1100px, 92%);
+    min-height: 64px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-brand,
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-brand {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a:hover {
+    color: #facc15;
+}
+
+
+#cart-count {
+    padding: .15rem .4rem;
+    border-radius: 5px;
+    background: #facc15;
+    color: #222;
+    font-size: .75rem;
+}
+
