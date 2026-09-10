@@ -1,8 +1,10 @@
 /* ============================================
    BASE
    ============================================ */
+/* Reglas generales reutilizadas por las páginas públicas del proyecto. */
 
 .navbar-background {
+    /* Color principal de la barra de navegación y del pie de página. */
     background-color: #022b7c !important;
 }
 
@@ -10,6 +12,7 @@
 /* ============================================
    BANNER CON VIDEO DE FONDO
    ============================================ */
+/* Estas reglas hacen que el video ocupe todo el banner sin deformarse. */
 .video-banner {
     position: relative;
     width: 100%;
@@ -22,6 +25,7 @@
 }
 
 #bg-video {
+    /* Posiciona el video como fondo y lo ajusta al tamaño del contenedor. */
     position: absolute;
     inset: 0;
     width: 100%;
@@ -31,12 +35,14 @@
 }
 
 .overlay {
+    /* Capa ubicada sobre el video para controlar la lectura del contenido. */
     position: absolute;
     inset: 0;
     z-index: 1;
 }
 
 /* Texto del banner: TÍTULO BLANCO, SUBTÍTULO AMARILLO */
+/* Se aplican colores de alto contraste al título y al texto descriptivo. */
 .video-banner .container h1 {
     color: #ffffff !important;
 }
@@ -45,6 +51,7 @@
 }
 
 /* Badge "24/7" con fondo naranja */
+/* Ajusta el tamaño del distintivo 24/7 junto al título principal. */
 .badge-24 {
     display: inline-block;
     padding: 0.35em 0.65em;
@@ -55,6 +62,7 @@
 /* ============================================
    RESPONSIVE
    ============================================ */
+/* En teléfonos, el banner crece y los botones ocupan todo el ancho disponible. */
 @media (max-width: 576px) {
     .video-banner {
         min-height: 520px;

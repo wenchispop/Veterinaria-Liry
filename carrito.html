@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<!-- Configuración básica de la página y adaptación a dispositivos móviles. -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carrito - Veterinaria Liry</title>
+	<!-- Bootstrap proporciona la estructura responsive y los estilos de los componentes. -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Estilos propios compartidos por el sitio. -->
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="bg-light">
+
+	<!-- ===== NAVBAR ===== -->
+	<!-- Esta barra permite volver al inicio, visitar la tienda o iniciar sesión. -->
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-background">
+		<div class="container">
+			<a class="navbar-brand fw-bold" href="index.html">🐾 Veterinaria Liry</a>
+			<!-- Botón que muestra el menú en pantallas pequeñas. -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Mostrar navegación">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+					<li class="nav-item"><a class="nav-link" href="agendarHora.html">Agendar hora</a></li>
+					<li class="nav-item"><a class="nav-link" href="login.html">🔑 Iniciar Sesión</a></li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="carrito.html">
+							🛒 Carrito <span id="cart-count" class="badge bg-warning text-dark">0</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- ===== CONTENIDO PRINCIPAL ===== -->
+	<!-- Esta sección muestra los productos seleccionados y el total de la compra. -->
+	<main class="container py-5">
+		<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+			<div>
+				<h1 class="mb-1">🛒 Mi carrito</h1>
+				<p class="text-muted mb-0">Revisa los productos antes de finalizar tu compra.</p>
+			</div>
+			<!-- Permite eliminar todos los productos guardados. -->
+			<button id="clear-cart" class="btn btn-outline-danger">Vaciar carrito</button>
+		</div>
+
+		<div class="row g-4">
+			<div class="col-lg-8">
+				<!-- JavaScript inserta aquí cada producto guardado. -->
+				<div id="cart-items" class="list-group shadow-sm"></div>
+				<!-- Mensaje visible cuando no existen productos en el carrito. -->
+				<div id="empty-cart" class="alert alert-info text-center d-none mt-3">
+					Tu carrito está vacío. Visita la tienda para agregar productos.
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<!-- Resumen de precios y botón para confirmar la compra. -->
+				<div class="card shadow-sm">
+					<div class="card-body">
+						<h2 class="h4">Resumen de compra</h2>
+						<hr>
+						<div class="d-flex justify-content-between fs-5">
+							<span>Total</span>
+							<strong id="cart-total">$0</strong>
+						</div>
+						<button id="checkout-button" class="btn btn-primary w-100 mt-4">Finalizar compra</button>
+						<a href="tienda.html" class="btn btn-outline-secondary w-100 mt-2">Continuar comprando</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- ===== FOOTER ===== -->
+	<!-- Pie de página con la información de la veterinaria. -->
+	<footer class="navbar-background text-white py-4 mt-5">
+		<div class="container text-center">
+			<p class="mb-0">© 2026 Veterinaria Liry - Todos los derechos reservados</p>
+		</div>
+	</footer>
+
+	<!-- Bootstrap habilita el menú responsive. -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Script propio que lee y actualiza los productos del carrito. -->
+	<script src="js/main.js"></script>
+</body>
+</html>

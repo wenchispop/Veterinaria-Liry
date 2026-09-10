@@ -10,6 +10,7 @@
 </head>
 <body class="bg-light">
 
+	<!-- Barra de navegación para acceder a las páginas principales. -->
 	<nav class="navbar navbar-expand-lg navbar-dark navbar-background">
 		<div class="container">
 			<a class="navbar-brand fw-bold" href="index.html">🐾 Veterinaria Liry</a>
@@ -30,6 +31,7 @@
 		</div>
 	</nav>
 
+	<!-- Contenido principal de la solicitud de atención veterinaria. -->
 	<main class="container py-5">
 		<div class="row justify-content-center">
 			<div class="col-lg-9 col-xl-8">
@@ -39,9 +41,12 @@
 					<p class="text-muted mb-0">Completa tus datos y nos pondremos en contacto para confirmar la cita.</p>
 				</div>
 
+				<!-- La tarjeta agrupa todos los campos necesarios para agendar una hora. -->
 				<div class="card border-0 shadow-sm">
 					<div class="card-body p-4 p-md-5">
+						<!-- Este formulario recopila los datos del tutor, la mascota y la consulta. -->
 						<form id="appointmentForm">
+							<!-- Datos de contacto de la persona responsable de la mascota. -->
 							<fieldset class="mb-4">
 								<legend class="h4 mb-3">Datos del tutor</legend>
 								<div class="row g-3">
@@ -60,6 +65,7 @@
 								</div>
 							</fieldset>
 
+							<!-- Información básica de la mascota que recibirá atención. -->
 							<fieldset class="mb-4">
 								<legend class="h4 mb-3">Datos de la mascota</legend>
 								<div class="row g-3">
@@ -79,6 +85,7 @@
 								</div>
 							</fieldset>
 
+							<!-- Servicio, fecha, hora y motivo de la visita veterinaria. -->
 							<fieldset class="mb-4">
 								<legend class="h4 mb-3">Detalles de la consulta</legend>
 								<div class="row g-3">
@@ -118,6 +125,7 @@
 								</div>
 							</fieldset>
 
+							<!-- El tutor debe aceptar el uso de sus datos para coordinar la cita. -->
 							<div class="form-check mb-4">
 								<input class="form-check-input" type="checkbox" id="privacyConsent" required>
 								<label class="form-check-label" for="privacyConsent">Acepto que Veterinaria Liry use estos datos para coordinar mi hora.</label>
@@ -136,6 +144,7 @@
 		</div>
 	</main>
 
+	<!-- Pie de página de la página de agenda. -->
 	<footer class="navbar-background text-white py-4 mt-3">
 		<div class="container text-center">
 			<p class="mb-0">© 2026 Veterinaria Liry - Todos los derechos reservados</p>
@@ -143,18 +152,7 @@
 	</footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-		const appointmentDate = document.getElementById('appointmentDate');
-		const today = new Date();
-		const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000);
-		appointmentDate.min = localDate.toISOString().split('T')[0];
-
-		document.getElementById('appointmentForm').addEventListener('submit', function (event) {
-			event.preventDefault();
-			document.getElementById('appointmentMessage').classList.remove('d-none');
-			this.reset();
-			appointmentDate.min = localDate.toISOString().split('T')[0];
-		});
-	</script>
+	<!-- Actualiza el contador del carrito en la página de agenda. -->
+	<script src="js/main.js"></script>
 </body>
 </html>
