@@ -26,7 +26,7 @@ class Navbar extends HTMLElement {
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li> -->
                             <li class="nav-item"><a class="nav-link active" href="login.html">🔑 Iniciar Sesión</a></li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="carrito.html">
