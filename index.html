@@ -1,24 +1,57 @@
 <!DOCTYPE html>
+<!-- DOCTYPE: Define la version de HTML que se esta utilizando. Se trabaja con HTML5, 
+  el estandar actual del lenguaje de marcado.
+-->
 <html lang="es">
+<!-- <html>: Es el elemento raiz que contiene todo el documento (tanto el <head> como el <body>).
+  El atributo "lang" indica el idioma principal del contenido.
+-->
 <head>
+    <!-- <head>: Contiene la informacion tecnica/metadatos del documento. 
+      Nada de lo que hay aqui se muestra directamente en la pagina.
+    -->
     <meta charset="UTF-8" />
+    <!-- Define la codificacion de caracteres del documento como UTF-8, lo que permite mostrar
+     correctamente tildes, ñ y otros caracteres especiales del español.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- DISEÑO RESPONSIVO. Le indica al navegador que ajuste el ancho de la pagina
+     al ancho del dispositivo (celular, tablet o escritorio) y que el zoom inicial sea 1:1.
+     Sin esta etiqueta, el sitio no se adaptaria correctamente a pantallas pequeñas.
+    -->
     <title>Veterinaria Liry - Inicio</title>
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+     <!-- <link>: Elemento vacio que conecta el documento con una HOJA DE ESTILOS EXTERNA.
+      En este caso, se esta importando el framework Bootstrap 5 mediante un CDN (Content Delivery 
+      Network). Esto entrega automaticamente clases predefinidas para grillas, botones, tarjetas, etc.
+    -->
     <!-- Estilos propios -->
     <link rel="stylesheet" href="css/estilo.css" />
 </head>
 <body>
+<!-- <body>: Contiene todo el contenido VISIBLE de la pagina web (lo que el usuario 
+      ve e interactua en el navegador).
+    -->
 
     <!-- ===== NAVBAR ===== -->
     <!-- El componente reutilizable inserta la navegación pública del sitio. -->
     <custom-navbar></custom-navbar>
+    <!-- <custom-navbar>: Es una tecnica que permite crear etiquetas propias reutilizables 
+      mediante JavaScript. Al insertar <custom-navbar></custom-navbar>, un script (cargado al 
+      final del <body>) se encarga de "rellenar" automaticamente esta etiqueta con el menu de 
+      navegacion real, evitando repetir el mismo codigo HTML en cada pagina del sitio.
+    -->
 
     <!-- ===== BANNER CON VIDEO (similar al estilo de la imagen) ===== -->
         <!-- Esta sección muestra un video de fondo con el mensaje principal de la veterinaria
             y botones para acceder rápidamente a sus opciones más importantes. -->
     <header class="video-banner">
+        <!-- <header>: Etiqueta SEMÁNTICA de HTML5. A diferencia de un <div> genérico,
+          comunica que este bloque es el encabezado/introducción visual de la pagina. 
+          El atributo "class" (class="video-banner") le asigna un identificador de grupo 
+          que luego el CSS externo (estilo.css) usa para darle estilos específicos.
+        -->
         <video autoplay muted loop playsinline id="bg-video">
             <source src="img/videomichi2.mp4" type="video/mp4" />
         </video>
