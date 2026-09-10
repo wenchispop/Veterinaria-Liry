@@ -53,15 +53,35 @@
           que luego el CSS externo (estilo.css) usa para darle estilos específicos.
         -->
         <video autoplay muted loop playsinline id="bg-video">
+            <!-- <video>: Etiqueta multimedia de HTML5 usada como fondo animado del banner. 
+          Sus atributos booleanos controlan el comportamiento:
+            - autoplay: se reproduce automáticamente al cargar la página.
+            - muted: inicia sin sonido (requisito de los navegadores para permitir el autoplay).
+            - loop: se repite en bucle infinito.
+            - playsinline: se reproduce dentro de la página en dispositivos móviles, sin pantalla completa.
+          El atributo "id" (id="bg-video") es un IDENTIFICADOR ÚNICO del elemento, útil si se 
+          necesita manipular este video puntual desde CSS o JavaScript.
+        -->
             <source src="img/videomichi2.mp4" type="video/mp4" />
+            <!-- <source>: Elemento vacío hijo de <video> que indica el archivo de origen
+                (atributo "src") y su formato (atributo "type").
+            -->
         </video>
         <div class="overlay"></div>
+        <!-- <div>: Contenedor generico sin significado semantico propio. 
+          Aquí se usa como una capa semitransparente (definida en el CSS) que se superpone al 
+          video para oscurecerlo levemente y así mejorar la legibilidad del texto que va encima.
+        -->
         <!-- El contenido queda separado del video para conservar su legibilidad. -->
-        <div class="hero-content">
+        <div class="hero-content"> <!-- Contenedor generico que agrupa el titulo, texto y botones del banner. -->
             <!-- Título principal con badge 24/7 -->
             <h1 class="hero-title">
                 Hospital Veterinario <span class="hero-badge">24/7</span>
             </h1>
+            <!-- <h1>: Encabezado de mayor jerarquía en la página (existe uno por página). 
+              Dentro contiene un <span>, una etiqueta genérica EN LÍNEA (no genera salto de línea) 
+              que permite aplicar un estilo distinto solo a la palabra "24/7".
+            -->
             <p class="hero-text">
                 Urgencias, especialidades médicas, cirugías y hospitalización con atención continua para tu mascota.
             </p>
@@ -71,6 +91,11 @@
                 <a href="agendarHora.html" class="hero-button">📅 Agendar cita</a>
                 <a href="https://web.whatsapp.com/" class="hero-button hero-whatsapp">💬 WhatsApp</a>
             </div>
+            <!-- <a>: Etiqueta de hipervínculo. Su atributo "href" define el destino del enlace: 
+              puede ser una página interna del mismo sitio (ej: "tienda.html") o una URL externa 
+              (ej: WhatsApp Web). Aquí se usan como botones de acción gracias a las clases CSS 
+              aplicadas (class="hero-button"), aunque siguen siendo técnicamente enlaces <a>.
+            -->
         </div>
     </header>
 
@@ -78,12 +103,39 @@
         <!-- Estas tres tarjetas resumen algunos servicios ofrecidos por la veterinaria:
             agenda de horas, especialidades médicas y hospitalización. -->
     <section class="container my-5">
+        <!-- <section>: Etiqueta semántica que agrupa un bloque temático de contenido (en este caso, 
+          los servicios). Las clases "container" y "my-5" pertenecen al framework Bootstrap: 
+          "container" centra y limita el ancho del contenido, y "my-5" agrega márgenes 
+          verticales (margin-top y margin-bottom) según la escala de espaciados de Bootstrap.
+        -->
         <div class="row g-4">
+            <!-- "row": clase de Bootstrap que define una FILA dentro del sistema de grillas (grid system). 
+          "g-4": agrega un espaciado (gap) entre las columnas de esta fila. Este es el mecanismo 
+          que Bootstrap usa para lograr diseño responsivo sin escribir CSS personalizado.
+        -->
             <div class="col-md-4">
+                <!-- "col-md-4": columna de Bootstrap que ocupa 4 de las 12 columnas totales de la 
+              grilla (es decir, un tercio del ancho) a partir del tamaño de pantalla "md" 
+              (tablets/escritorio en adelante). En pantallas más pequeñas (celulares), 
+              esta columna ocupa el 100% del ancho automáticamente, logrando la 
+              RESPONSIVIDAD sin necesidad de media queries manuales.
+            -->
                 <div class="card h-100 text-center p-4 shadow-sm">
+                    <!-- "card": componente predefinido de Bootstrap para mostrar contenido en formato 
+                  de tarjeta. "h-100" fuerza que ocupe el 100% de la altura disponible (para que 
+                  las tres tarjetas queden parejas), "text-center" centra el texto, "p-4" agrega 
+                  padding interno y "shadow-sm" añade una sombra sutil.
+                -->
                     <div style="font-size: 3rem;">🕒</div>
+                    <!-- Estilo en línea (atributo "style") aplicado directamente sobre el elemento, 
+                      que agranda el emoji usado como ícono. Es una forma válida de aplicar CSS, 
+                      aunque menos recomendable que usar una clase, ya que no es reutilizable.
+                    -->
                     <h5 class="card-title mt-3 fw-bold">Agendar Hora</h5>
                     <p class="card-text text-muted">Todos los días</p>
+                    <!-- <h5> y <p>: encabezado y párrafo con clases utilitarias de Bootstrap 
+                      (mt-3: margen superior, fw-bold: negrita, text-muted: texto gris apagado).
+                    -->
                 </div>
             </div>
             <div class="col-md-4">
@@ -100,6 +152,10 @@
                     <p class="card-text text-muted">Atención 24 horas</p>
                 </div>
             </div>
+            <!-- Las dos tarjetas siguientes repiten exactamente la misma estructura que la primera, 
+              solo cambiando el ícono y el texto. Esto ejemplifica el concepto de ANIDAMIENTO 
+              correcto de elementos visto en el material de HTML.
+            -->
         </div>
     </section>
 
@@ -112,12 +168,30 @@
             <div class="col-md-4 mb-4">
                 <div class="card bg-light text-dark h-100">
                     <img src="img/imagenProducto1.png" class="card-img-top" alt="Corona Plateada Con Perlas Blancas Para Gatos" style="height: 200px; object-fit: cover;">
+                    <!-- <img>: ELEMENTO VACÍO (no tiene etiqueta de cierre) que despliega una imagen. 
+                      "src" indica la ruta del archivo, y "alt" es el texto alternativo que se 
+                      muestra si la imagen no carga o es leído por lectores de pantalla (accesibilidad). 
+                      Aquí se combina con "class" (clase de Bootstrap "card-img-top") y un estilo 
+                      en línea que recorta la imagen a una altura fija.
+                    -->
                     <div class="card-body">
                         <h5 class="card-title">Corona Plateada Con Perlas Blancas Para Gatos</h5>
                         <p class="card-text">$7.990</p>
                         <!-- Botón que guarda este producto en el carrito del navegador. -->
                         <button class="btn btn-success btn-agregar-carrito" data-id="1" data-nombre="Corona Plateada Con Perlas Blancas Para Gatos" data-precio="7990" data-imagen="img/imagenProducto1.png">🛒 Agregar</button>
+                        <!-- <button>: Elemento de botón interactivo. Los atributos que comienzan con 
+                          "data-" (data-id, data-nombre, data-precio, data-imagen) son ATRIBUTOS 
+                          DE DATOS PERSONALIZADOS de HTML5: no afectan la apariencia ni el 
+                          comportamiento nativo del botón, pero permiten "guardar" información 
+                          del producto directamente en la etiqueta, para que un script en 
+                          JavaScript (layout.js) la lea al hacer clic y así agregar el producto 
+                          al carrito de compras.
+                        -->
                         <a href="detalle-producto.html?id=1" class="btn btn-primary">🔍 Ver detalle</a>
+                        <!-- Enlace hacia la página de detalle del producto. El "?id=1" al final de 
+                          la URL es un parámetro que esa página puede leer para saber qué 
+                          producto específico debe mostrar.
+                        -->
                     </div>
                 </div>
             </div>
@@ -145,16 +219,31 @@
                     </div>
                 </div>
             </div>
+            <!-- Las tres tarjetas de producto repiten la misma estructura anidada 
+              (card > img + card-body > title + text + botones), cambiando solo los datos 
+              propios de cada producto.
+            -->
         </div>
     </section>
 
     <!-- ===== FOOTER ===== -->
     <!-- El componente reutilizable inserta el pie de página del sitio. -->
     <custom-footer></custom-footer>
+       <!-- 
+      Al igual que <custom-navbar>, es un Web Component personalizado que será completado 
+      dinámicamente por JavaScript con el contenido real del pie de página 
+      (nombre del equipo, año, enlaces, etc.), evitando repetir ese bloque en cada página del sitio.
+    -->
 
     <!-- El layout registra el navbar, el footer y el menú responsive. -->
     <!-- Registra los componentes reutilizables de navegación y pie de página. -->
     <script src="js/Componentes/layout.js"></script>
+    <!-- <script>: Etiqueta que carga un archivo JavaScript externo. Se ubica al FINAL del <body> 
+      (justo antes de cerrarlo) como buena práctica, para que el navegador dibuje primero todo 
+      el HTML/CSS de la página y solo después ejecute el script; así la página se percibe como 
+      más rápida y evita bloqueos en la carga. Este script es el responsable de "activar" 
+      los componentes <custom-navbar> y <custom-footer> vistos anteriormente.
+    -->
 
 </body>
 </html>
