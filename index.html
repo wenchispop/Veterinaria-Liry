@@ -12,32 +12,8 @@
 <body>
 
     <!-- ===== NAVBAR ===== -->
-        <!-- Esta barra permite navegar entre el inicio, la tienda, los servicios,
-            el inicio de sesión y el carrito de compras. -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                🐾 Veterinaria Liry
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="tienda.html">Tienda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="servicios.html">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="login.html">🔑 Iniciar Sesión</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="carrito.html">
-                            🛒 Carrito
-                            <span id="cart-count" class="badge bg-warning text-dark">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- El componente reutilizable inserta la navegación pública del sitio. -->
+    <custom-navbar></custom-navbar>
 
     <!-- ===== BANNER CON VIDEO (similar al estilo de la imagen) ===== -->
         <!-- Esta sección muestra un video de fondo con el mensaje principal de la veterinaria
@@ -140,15 +116,13 @@
     </section>
 
     <!-- ===== FOOTER ===== -->
-    <!-- El pie de página muestra información legal y el año de la veterinaria. -->
-    <footer class="navbar-background text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2026 Veterinaria Liry - Todos los derechos reservados</p>
-        </div>
-    </footer>
+    <!-- El componente reutilizable inserta el pie de página del sitio. -->
+    <custom-footer></custom-footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Registra los componentes reutilizables de navegación y pie de página. -->
+    <script src="js/Componentes/layout.js"></script>
     <!-- Lógica para actualizar el contador y guardar productos en el carrito. -->
     <script src="js/main.js"></script>
 

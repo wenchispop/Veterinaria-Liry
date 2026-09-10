@@ -10,24 +10,8 @@
 <body>
     <!-- ===== NAVBAR ===== -->
     <!-- Esta barra permite navegar entre el inicio, usuarios, citas y cierre de sesión. -->
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">
-                🐾 Veterinaria Liry
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="usuarios.html">👥 Gestionar Usuarios</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="citas.html">📅 Gestionar Citas</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="login.html">🔐 Cerrar Sesión</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- El componente administrativo inserta el menú común de esta carpeta. -->
+    <custom-navbaradmin></custom-navbaradmin>
 
     <!-- ==================== CUERPO PRINCIPAL ==================== -->
     <!-- Zona principal donde el administrador consulta el resumen del sistema. -->
@@ -78,13 +62,11 @@
 
     <!-- ===== FOOTER ===== -->
     <!-- Pie de página del panel de administración. -->
-    <footer class="navbar-background text-white py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-0">© 2026 Veterinaria Liry - Todos los derechos reservados</p>
-        </div>
-    </footer>
+    <custom-footer></custom-footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/admin.js"></script>
+    <!-- Registra el navbar administrativo y el footer reutilizable. -->
+    <script src="../js/Componentes/layout.js"></script>
+    <script src="../js/admin.js"></script>
 </body>
 </html>
