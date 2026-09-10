@@ -25,7 +25,6 @@ Veterinaria-Liry/
 |-- carrito.html
 |-- css/
 |   |-- estilo.css
-|   |-- admin.css
 |-- js/
 |   |-- login.js
 |   |-- admin.js
