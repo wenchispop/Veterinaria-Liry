@@ -46,7 +46,7 @@ botonInicioSesion.addEventListener('click', function () {
     // Caso 2: Vendedor
     if (email === 'vendedor@tienda.cl' && password === '1234') {
         localStorage.setItem('rol_usuario', 'vendedor');
-        window.location = 'vendedor/index.html';
+        window.location = 'admin/vendedor.html';
         return;
     
     } else {
