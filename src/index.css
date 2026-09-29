@@ -1,4 +1,12 @@
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
+main {
+    flex: 1;
+}
 
 /* ============================================
    BANNER CON VIDEO DE FONDO
@@ -76,6 +84,14 @@
     border: 1px solid #fff;
     border-radius: 5px;
     color: #fff;
+    text-decoration: none;
+}
+
+.hero-button-secondary {
+    padding: .7rem 1rem;
+    border-color: #2000ef;
+    background: #2000ef;
+    border-radius: 5px;
     text-decoration: none;
 }
 
