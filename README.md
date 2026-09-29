@@ -1,62 +1,16 @@
-# Documentación técnica.
-## Veterinaria Liry
+# React + Vite
 
-## 1. Idea general del proyecto
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Veterinaria Liry es una aplicacion web sencilla para mostrar los servicios de una veterinaria, presentar productos y permitir el acceso a distintas areas del sistema.
+Currently, two official plugins are available:
 
-El proyecto se organiza con tecnologías básicas de frontend:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- HTML: estructura y contenido de las paginas.
-- CSS: colores, posiciones, tamaños y apariencia propia.
-- JavaScript: componentes reutilizables, validacion del login y control de roles.
-- Bootstrap 5: estilos prediseñados para formularios, tarjetas y distribución responsive.
+## React Compiler
 
-La aplicacion funciona como un proyecto frontend. No tiene una base de datos ni un servidor backend conectado.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 2. Estructura de carpetas
+## Expanding the ESLint configuration
 
-```
-Veterinaria-Liry/
-|-- index.html
-|-- tienda.html
-|-- login.html
-|-- agendarHora.html
-|-- carrito.html
-|-- css/
-|   |-- estilo.css
-|-- js/
-|   |-- login.js
-|   |-- admin.js
-|   |-- vendedor.js
-|   |-- main.js
-|   |-- Componentes/
-|       |-- layout.js
-|-- admin/
-|   |-- index.html
-|   |-- usuarios.html
-|   |-- citas.html
-|   |-- vendedor.html
-|-- img/
-```
-```
-    *                  *
-        __-                *
-     ,db'    *     *
-    ,d8/       *        *    *
-    888
-    `db\       *     *
-      `o`_                    **
- *        -       *   *         *
-       *                 / )
-    *    (\__/) *       ( (  *
- | @|  ={      }= | @|  / / | @|o |
-_j__j__j_)     `-------/ /__j__j__j_
-________(               /___________
- |  | @| \              || o|O | @|
- |o |  |,'\       ,   ,'"|  |  |  |  
-vV\|/vV|`-'\  ,---\   | \Vv\hjwVv\//v
-            ) )    `. \ /
-          (__/       ) )
-                    (_/
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
