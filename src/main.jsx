@@ -8,6 +8,8 @@ import Tienda from './pages/tienda.jsx'
 import IniciarSesion from './pages/iniciarSesion.jsx'
 import Carrito from './pages/carrito.jsx'
 import AgendarHora from './pages/agendarHora.jsx'
+import Usuarios from './pages/usuarios.jsx'
+import Vendedor from './pages/vendedor.jsx'
 
 createRoot(document.getElementById('root')).render(
 
@@ -19,6 +21,8 @@ createRoot(document.getElementById('root')).render(
         <Route path="/login" element={<IniciarSesion />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/agendarHora" element={<AgendarHora />} />
+        <Route path="/usuarios" element={<Usuarios />} />
+        <Route path="/vendedor" element={<Vendedor />} />
         <Route path="/test" element={<App />} />
       </Routes>
     </BrowserRouter>
