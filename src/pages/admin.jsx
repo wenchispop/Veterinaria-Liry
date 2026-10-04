@@ -1,11 +1,11 @@
 
-import Header from '../components/header'
+import HeaderAdmin from '../components/headerAdmin'
 import Footer from '../components/footer'
 
 const Admin = () => {
   return (
     <>
-      <Header />
+      <HeaderAdmin />
 
             <main className="container py-5">
                 {/* ==================== CUERPO PRINCIPAL ==================== */}
@@ -40,7 +40,6 @@ const Admin = () => {
                             </div>
 
                             {/* Actividad reciente. */}
-                            {/* Esta lista queda preparada para mostrar las últimas acciones realizadas. */}
                             <div className="card">
                                 <div className="card-header bg-primary text-white">📋 Últimas actividades</div>
                                 <div className="card-body">
