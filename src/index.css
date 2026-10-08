@@ -56,16 +56,6 @@ main {
     font-weight: 700;
 }
 
-.hero-badge {
-    display: inline-block;
-    padding: .35em .65em;
-    border-radius: 5px;
-    background: #facc15;
-    color: #222;
-    font-size: .48em;
-    vertical-align: middle;
-}
-
 .hero-text {
     margin: 1rem 0 1.5rem;
     color: #facc15;
@@ -121,21 +111,80 @@ main {
     color: #fff;
 }
 
-/* El footer comparte el color y la separación visual del navbar. */
+/* El footer comparte el color principal del navbar y organiza su contenido en secciones. */
 .site-footer {
     margin-top: 3rem;
     background: #022b7c;
     color: #fff;
 }
 
-.site-footer .nav-inner {
-    justify-content: center;
-    padding: 1.5rem 0;
+.footer-inner {
+    width: min(1100px, 92%);
+    margin: auto;
 }
 
-.site-footer p {
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.footer-about {
+    max-width: 340px;
+}
+
+.footer-brand {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.footer-about p {
+    margin: .65rem 0 0;
+    color: #dbe7ff;
+}
+
+.footer-links {
+    display: grid;
+    align-content: start;
+    gap: .55rem;
+}
+
+.footer-links h2 {
+    margin: 0 0 .25rem;
+    font-size: 1rem;
+}
+
+.footer-links a {
+    color: #dbe7ff;
+    text-decoration: none;
+}
+
+.footer-brand:hover,
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgb(255 255 255 / 20%);
+    padding: 1rem 0;
+}
+
+.footer-bottom p {
     margin: 0;
-    text-align: center;
+    color: #dbe7ff;
+    font-size: .9rem;
+}
+
+@media (max-width: 600px) {
+    .footer-main {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
 }
 
 .nav-inner {
@@ -166,6 +215,4 @@ main {
     padding: 0;
     list-style: none;
 }
-
-
 

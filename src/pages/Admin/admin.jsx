@@ -1,6 +1,6 @@
 
-import HeaderAdmin from '../components/headerAdmin'
-import Footer from '../components/footer'
+import HeaderAdmin from '../../components/headerAdmin'
+import Footer from '../../components/footer'
 
 const Admin = () => {
   return (

@@ -1,6 +1,6 @@
 
-import Header from '../components/header'
-import Footer from '../components/footer'
+import HeaderAdmin from '../../components/headerAdmin'
+import Footer from '../../components/footer'
 
 const Vendedor = () => {
   return (

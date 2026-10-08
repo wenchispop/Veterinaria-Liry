@@ -9,7 +9,7 @@ const HeaderAdmin = () => {
                     <li><NavLink to="/">Inicio</NavLink></li>
                     <li><NavLink to="/usuarios">👥 Gestionar Usuarios</NavLink></li>
                     <li><NavLink to="/agendarHora"> 📅 Gestionar Citas</NavLink></li>
-                    <li><NavLink to="/iniciarSesion">🔐 Cerrar Sesión <span id="cart-count">0</span></NavLink></li>
+                    <li><NavLink to="/login">🔐 Cerrar Sesión</NavLink></li>
                 </ul>
             </div>
         </nav>
