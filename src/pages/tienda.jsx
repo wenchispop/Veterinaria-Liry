@@ -10,6 +10,7 @@ function agregarAlCarrito(producto) {
 }
 
 const Tienda = () => {
+
   return (
     <>
       <Header />
